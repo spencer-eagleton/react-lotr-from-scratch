@@ -10,13 +10,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <header>
-          <NavLink to="/">Home</NavLink>
+          <NavLink exact to="/">
+            Home
+          </NavLink>
           <NavLink to="/books">Books</NavLink>
           <NavLink to="/characters">Characters</NavLink>
           <NavLink to="/films">Films</NavLink>
         </header>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Main />
           </Route>
           <Route path="/books">
